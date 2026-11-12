@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+  <main class="calculator w-full max-w-sm rounded-3xl p-5 sm:p-6 shadow-2xl">
+    <div class="flex items-center justify-between mb-5">
+      <div>
+        <p class="text-sm text-slate-400">SMART TOOL</p>
+        <h1 class="text-2xl font-bold text-white">Calculator</h1>
+      </div>
+      <div class="rounded-full bg-slate-700/70 px-3 py-2 text-xs text-cyan-300">STANDARD</div>
+    </div>
+
+    <section class="display rounded-2xl p-4 mb-4" aria-live="polite">
+      <div id="expression" class="min-h-6 text-right text-slate-400 text-sm break-all"></div>
+      <div id="display" class="text-right text-white text-4xl font-semibold break-all mt-2">0</div>
+    </section>
+
+    <div class="grid grid-cols-4 gap-3" id="keys">
+      <button class="key utility" data-action="clear">AC</button>
+      <button class="key utility" data-action="sign">+/-</button>
+      <button class="key utility" data-action="percent">%</button>
+      <button class="key operator" data-value="÷">÷</button>
+
+      <button class="key" data-value="7">7</button>
+      <button class="key" data-value="8">8</button>
+      <button class="key" data-value="9">9</button>
+      <button class="key operator" data-value="×">×</button>
+
+      <button class="key" data-value="4">4</button>
+      <button class="key" data-value="5">5</button>
+      <button class="key" data-value="6">6</button>
+      <button class="key operator" data-value="−">−</button>
+
+      <button class="key" data-value="1">1</button>
+      <button class="key" data-value="2">2</button>
+      <button class="key" data-value="3">3</button>
+      <button class="key operator" data-value="+">+</button>
+
+      <button class="key col-span-2" data-value="0">0</button>
+      <button class="key" data-action="decimal">.</button>
+      <button class="key equals" data-action="equals">=</button>
+    </div>
+    <p class="text-center text-xs text-slate-500 mt-5">Keyboard supported · Clear with Esc</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
